@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VietHUD Project | ESP32 Custom HUD</title>
+    <style>
+        :root {
+            --primary-color: #00d2ff;
+            --bg-color: #0f172a;
+            --text-color: #f8fafc;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            line-height: 1.6;
+        }
+        header {
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), 
+                        url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1000&q=80'); /* Ảnh nền công nghệ */
+            background-size: cover;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 { font-size: 3rem; margin-bottom: 10px; color: var(--primary-color); }
+        .container { max-width: 900px; margin: auto; padding: 40px 20px; }
+        .card {
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            border-left: 5px solid var(--primary-color);
+        }
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: #000;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+        .btn:hover { transform: scale(1.05); opacity: 0.9; }
+        footer { text-align: center; padding: 40px; font-size: 0.9rem; opacity: 0.6; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>VIET HUD PROJECT</h1>
+    <p>Giải pháp hiển thị thông tin kính lái (HUD) tùy biến sử dụng ESP32</p>
+    <a href="#about" class="btn">Khám phá dự án</a>
+</header>
+
+<div class="container" id="about">
+    <div class="card">
+        <h2>🚀 Về dự án</h2>
+        <p>Dự án mã nguồn mở nhằm tạo ra một thiết bị HUD mô phỏng các tính năng của Vietmap, hỗ trợ hiển thị tốc độ, cảnh báo giao thông và các thông số xe qua cổng OBD2/GPS.</p>
+    </div>
+
+    <div class="card">
+        <h2>🛠 Thông số kỹ thuật</h2>
+        <ul>
+            <li><strong>Vi điều khiển:</strong> ESP32 (Dual Core)</li>
+            <li><strong>Thư viện đồ họa:</strong> LVGL / TFT_eSPI</li>
+            <li><strong>Kết nối:</strong> Bluetooth, Wi-Fi, GPS</li>
+            <li><strong>Màn hình:</strong> TFT hoặc OLED có độ sáng cao</li>
+        </ul>
+    </div>
+
+    <div class="card" style="text-align: center;">
+        <h2>📥 Tải xuống & Tài liệu</h2>
+        <p>Truy cập GitHub để xem mã nguồn và sơ đồ đấu nối.</p>
+        <a href="#" class="btn" style="background: #fff;">View on GitHub</a>
+    </div>
+</div>
+
+<footer>
+    &copy; 2026 VietHUD Project. Developed by You.
+</footer>
+
+</body>
+</html>
